@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.BorderPane?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextArea?>
+
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.ListView?>
+<BorderPane xmlns:fx="http://javafx.com/fxml/1"
+            styleClass="border-pane"
+            fx:controller = "MyController"
+            fx:id="borderPane">
+
+    <top>
+        <Label text = "Build Your Coffee Order"
+               BorderPane.alignment = "CENTER"
+               styleClass = "title"/>
+    </top>
+
+    <left>
+        <VBox spacing="10" style="-fx-padding: 10;">
+            <Label text = "Add-ons:" styleClass = "subtitle"/>
+            <Button fx:id="sugarButton" text = "Add Sugar" onAction = "#handleSugar"></Button>
+            <Button fx:id="creamButton" text = "Add Cream" onAction = "#handleCream" ></Button>
+            <Button fx:id="extraShotButton" text = "Add Extra Shot" onAction = "#handleExtraShot"></Button>
+            <Button fx:id="caramelButton" text = "Add Caramel" onAction = "#handleCaramel" ></Button>
+            <Button fx:id="cinnamonButton" text= "Add Cinnamon" onAction = "#handleCinnamon"></Button>
+
+            <Separator/>
+
+            <Button text = "New Order" onAction = "#handleNewOrder"></Button>
+            <Button text = "Add Drink to Order" onAction="#handleAddDrink"/>
+
+            <Button text = "Complete Order" onAction = "#handleComplete"></Button>
+
+        </VBox>
+    </left>
+
+    <center>
+        <VBox alignment="CENTER" spacing = "15">
+
+            <Label text="Order will appear here..." styleClass="subtitle"/>
+
+            <ListView fx:id="orderList"
+                      prefWidth="300"
+                      prefHeight="250"/>
+
+            <Button text="Remove Selected Item"
+                    onAction="#handleRemoveSelected"/>
+            <Label text="Order Summary:" styleClass="subtitle"/>
+            <TextArea fx:id="outputArea"
+                      prefWidth="300"
+                      prefHeight="150"
+                      wrapText="true"
+                      editable="false"/>
+        </VBox>
+
+    </center>
+
+</BorderPane>

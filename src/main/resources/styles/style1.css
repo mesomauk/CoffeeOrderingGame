@@ -1,0 +1,64 @@
+
+
+.root {
+    -fx-font-family: "Segoe UI", Arial, sans-serif;
+    -fx-font-size: 14px;
+    -fx-background-color: #f4f2ee;
+}
+
+
+.border-pane {
+    -fx-background-color: #785a46;
+}
+
+.title {
+    -fx-font-size: 22px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #4a2c2a;
+    -fx-background-color: #e9d4c6;
+    -fx-alignment: center;
+    -fx-padding: 12 12 12 12;
+    -fx-border-color: #c8b1a4;
+    -fx-border-width: 0 0 2 0;
+}
+
+.subtitle {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #4a2c2a;
+    -fx-padding: 5 0 5 0;
+}
+
+
+.button {
+    -fx-background-color: #d9c1af;
+    -fx-text-fill: #3b2a28;
+    -fx-font-weight: bold;
+    -fx-background-radius: 5;
+    -fx-padding: 8 14;
+    -fx-border-color: #bfa897;
+    -fx-border-radius: 5;
+}
+
+.button:hover {
+    -fx-background-color: #cbb09a;
+}
+
+.button:pressed {
+    -fx-background-color: #b79c87;
+}
+
+.text-area {
+    -fx-control-inner-background: #fffdf9;
+    -fx-font-family: "Consolas", monospace;
+    -fx-font-size: 14px;
+    -fx-text-fill: #4a2c2a;
+    -fx-border-color: #d1c1b3;
+    -fx-border-radius: 5;
+    -fx-padding: 10;
+}
+
+/* Scrollbar appearance */
+.text-area .scroll-bar {
+    -fx-background-color: transparent;
+}
